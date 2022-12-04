@@ -17,6 +17,8 @@ A **Genetic Disease** originates from a flaw in the original genetic information
 
 ## ER model
 
+![ER](photos/ERD.png "designed uing erdplus.com")
+
 ### Entities
 
 The entities in this DBMS are:
