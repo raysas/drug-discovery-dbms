@@ -3,6 +3,8 @@
 
 ## Abstract
 
+This is a compulsory project for DataBase Management Systems course, taken in Fall 2022. Submission consisted of a 65 pages long paper explaining the different design stages of the dbms and implemented using MySQL workbench, followed by a 10 min powerpoint presentation in class.
+
 Drug Discovery is the process of identifying new therapeutics through computational and experimental methods. In general, it consists of 3 phases: development, clinical and postlaunch. This would require the creation of large data warehouses, and usually bioinformatics algorithms are involved in drug target identification. This database management system manages a drug discovery company's collected data of clinical trials and allows a team of experts (including pharmacologists, chemists, drug metabolism specialists, toxicologists, process chemists, and formulation and regulatory experts) to access a specialized part of it in order to relate biological and chemical entities with genetically based diseases, and neurodegenerative disorders in particular. This can be especially useful to come up with inferential statistics around the effectiveness of a drug and its chemical compounds in connection with the genetical origin of the disease.
 
 ## Introduction
