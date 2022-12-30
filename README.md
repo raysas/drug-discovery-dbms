@@ -322,12 +322,10 @@ The third normal form states that there's no transitive functional dependency. H
 
 The Boyce-Codd normal form states that every functional dependency rely on the super key. It's obeyed in this project attributes in each table functionally depend only on the primary key which is a super key.
 
-*a detailed normalization on each topic is to be covered soon... stay tuned*
+*a detailed normalization on each table is to be covered soon... stay tuned*
 
 ## References
 
 Sun, W., Zheng, W., & Simeonov, A. (2017). Drug discovery and development for rare genetic disorders. _American journal of medical genetics. Part A_, _173_(9), 2307. [https://doi.org/10.1002/ajmg.a.38326](https://doi.org/10.1002/ajmg.a.38326)
 
 Wooller, S. K., Benstead-Hume, G., Chen, X., Ali, Y., & Pearl, F. M. (2017). Bioinformatics in translational drug discovery. _Bioscience Reports_, _37_(4). [https://doi.org/10.1042/BSR20160180](https://doi.org/10.1042/BSR20160180)
-
-58
