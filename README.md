@@ -1,5 +1,8 @@
+--------------------------------------------------------
+# <p align="center"> DRUG DISCOVERY COMPANY: DRUGOPOPS
 
-# DRUG DISCOVERY COMPANY: DRUGOPOPS
+![cover](photos/presentation-cover.png)
+---------------------------------------
 
 ## Abstract
 
@@ -11,13 +14,13 @@ Drug Discovery is the process of identifying new therapeutics through computatio
 
 **Drug Discovery** consists of target identification, assay development, high throughput screening of small molecule libraries for hit identification, lead discovery and optimization, preclinical development, investigational new drug (IND) filing, clinical trials, and filing for final FDA approval (Thomas et al., 2010 as cited in Sun et al., 2017).
 
-![](RackMultipart20221204-1-3vhh30_html_c1ecf06e2cac75e9.jpg)
-
 A **Database Management System** role is to handle the storage, retrieval and organization of data allowing interaction and manipulation of this data by end users. Companies involved in drug discovery have a huge amount of data to process in the drug design phase, therefore require a database management system that efficiently manage and store data- regarding drugs, diseases and records of clinical trials- for a long period of time safely.
 
 A **Genetic Disease** originates from a flaw in the original genetic information, and can be due to mutation of genes, gross chromosomal abnormalities or temporal/spatial patterns of expression among other cases. In this project, the main interest will be around a mutation caused diseases, where genetical data will be stored and studied by the users of the DBMS.
 
 ## ER model
+
+### ER Schema
 
 ![ER](photos/ERD.png "designed uing erdplus.com")
 
@@ -37,7 +40,7 @@ _Entities are further explained in detail:_
 
 #### Patient
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - SSN: Social Security Number, unique identifier to each patient
 - Name: composed of
@@ -49,21 +52,21 @@ _ **Attributes:** _
 
 #### Record
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - Record number: each record has an auto-generated number
 - Effective: test whether the trial was effective, not effective or unknown
 
 #### Disease
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - Name: each disease has a unique name that identifies it
 - Type
 
 #### Gene
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - Code: unique identifier
 - Location:
@@ -74,7 +77,7 @@ _ **Attributes:** _
 
 #### Drug
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - Generic name: unique identifier
 - Biological classification
@@ -82,7 +85,7 @@ _ **Attributes:** _
 
 #### Compound
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - ID: unique identifier from ChEMBL database
 - Molecular formula
@@ -94,7 +97,7 @@ _ **Attributes:** _
 
 _Weak entity: dependent on Gene_
 
-_ **Attributes:** _
+_**Attributes:**_
 
 - Number: partial key, defines the variant with the gene name
 - Biotype: variant's functionality
@@ -126,12 +129,6 @@ The entities have the following characteristics:
 - Drug COMPOSED OF Compound
   - Each drug is a chemical entity hence must be composed of a chemical compound
   - Each chemical compound can form a drug
-
-### ER Schema
-
-![](RackMultipart20221204-1-3vhh30_html_c3fc40ab1cf169bb.png)
-
-_Made using erdplus.com_
 
 ## Relational Database Model
 
@@ -295,14 +292,15 @@ For integrity validation, ON DELETE and ON UPDATE were used to CASCADE; i.e., mo
 
 ## Implementation
 
-_This project was implemented using MySQL_.
+_This project was implemented using MySQL_         
+<img src="https://camo.githubusercontent.com/b3578157355b1ac74d38d0f89d1022095ba7f7a988db091cef0fa4a62685e87e/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f6d7973716c2d69636f6e2e737667" alt="icon" data-canonical-src="https://techstack-generator.vercel.app/mysql-icon.svg" style="max-width: 100%;" width="100" height="70">
 
 Implementing the database using SQL is composed of several steps.
 
 - First: to construct the tables we must use SQL as a Data Definition Language (DDL).
 - Second: Inserting data values, deleting and updating is part of the Data Manipulation Language (DML). Some data were generated using python scripts and converted to SQL syntax using regex. Any reference to any patient or possible trial test is not related to real life tests. Note that some of the scientific data were populated from public databases:
-  - ChEMBL: used for DRUG and COMPOUND
-  - ENSEMBLE: used for GENE and VARIANT
+  - [ChEMBL](https://www.ebi.ac.uk/chembl/): used for DRUG and COMPOUND
+  - [ENSEMBLE](https://asia.ensembl.org/index.html): used for GENE and VARIANT
 - Third: Querying the tables and coming up with projections and selections is through Data Query Language (DQL).
 
 
@@ -324,7 +322,7 @@ The third normal form states that there's no transitive functional dependency. H
 
 The Boyce-Codd normal form states that every functional dependency rely on the super key. It's obeyed in this project attributes in each table functionally depend only on the primary key which is a super key.
 
-_This page is intentionally left blank_
+*a detailed normalization on each topic is to be covered soon... stay tuned*
 
 ## References
 
