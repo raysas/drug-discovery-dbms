@@ -20,11 +20,14 @@ A **Database Management System** role is to handle the storage, retrieval and or
 
 Therefore, data about genes (names, location, variants along with their associated diseases) and drugs (names, chemical compositions, testing stages...) has to be collected from credible scientific sources and public databases (such as EBI's). The clinical trials are meant to test a drug on a volunteer with an identified disease in order to track the test results and the variables in each test in addition to the drug and disease such as age, sex, gene variant etc... In this project the records are associating diseases and drugs together from the sample data collected. **Note that no association nor test result is relevant in real life and people are fictional since data of records and patients was randomly generated using** `random module` **in python** (check [python scripts](./scripts/#python)).
 
-Priveleges in this project can be granted to several types of workers in this company in the following way:
-* _pharmacologists and chemists:_ would be GRANTED privileges on VIEW tables COMPOUND and DRUG to access and modify them
-* _Medical geneticists, physicians and biotechnologists:_ would be GRANTED privileges on VIEW tables GENE, DISEASE and VARIANT to access and modify them
-* _Process chemists, statisticians and data scientists:_ would be GRANTED privileges on VIEW tables COMPOUND, DRUG, GENE, DISEASE and VARIANT only to access them (no modification)
-* _Human Resources:_ would be GRANTED privileges on VIEW tables PATIENT and RECORDS to access and insert new data
+The project consisted of the following design phases:
+ * conceptual design (ER model)
+ * logical design (transformation to a relational model)
+ * physical model (implemeting this model using MySQL workbench)
+ 
+Furthermore, this database has been normalized up to the Boyce-Codd Normal Form.
+
+Users of this dbms (company's employees) have different specialities including pharmacologists, chemists, toxicologists, process chemists, geneticists, physicians, statisticians, data scientists, machine learning engineers, and human resources. Each user will be granted privileges based on the **role** he/she has.
 
 ## ER model
 
@@ -331,6 +334,17 @@ The third normal form states that there's no transitive functional dependency. H
 The Boyce-Codd normal form states that every functional dependency rely on the super key. It's obeyed in this project attributes in each table functionally depend only on the primary key which is a super key.
 
 *a detailed normalization on each table is to be covered soon... stay tuned*
+
+## Users
+
+Granting and revoking privileges will be given to users on the tables they need to work in, specifying the type of access (select, insert, delete, with grant option...).
+Privileges in this project can be granted to several types of workers in this company in the following way:
+* _pharmacologists and chemists:_ would be GRANTED privileges on tables COMPOUND and DRUG to access and modify them
+* _Medical geneticists, physicians and biotechnologists:_ would be GRANTED privileges on tables GENE, DISEASE and VARIANT to access and modify them
+* _Process chemists, statisticians and data scientists:_ would be GRANTED privileges on tables COMPOUND, DRUG, GENE, DISEASE and VARIANT only to access them (no modification)
+* _Human Resources:_ would be GRANTED privileges on tables PATIENT and RECORDS to access and insert new data
+
+_not implemented yet_
 
 ## References
 
