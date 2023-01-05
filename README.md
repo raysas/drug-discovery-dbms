@@ -8,15 +8,23 @@
 
 This is a compulsory project for DataBase Management Systems course, taken in Fall 2022. Submission consisted of a 65 pages long paper explaining the different design stages of the dbms and implemented using MySQL workbench, followed by a 10 min powerpoint presentation in class.
 
-Drug Discovery is the process of identifying new therapeutics through computational and experimental methods. In general, it consists of 3 phases: development, clinical and postlaunch. This would require the creation of large data warehouses, and usually bioinformatics algorithms are involved in drug target identification. This database management system manages a drug discovery company's collected data of clinical trials and allows a team of experts (including pharmacologists, chemists, drug metabolism specialists, toxicologists, process chemists, and formulation and regulatory experts) to access a specialized part of it in order to relate biological and chemical entities with genetically based diseases, and neurodegenerative disorders in particular. This can be especially useful to come up with inferential statistics around the effectiveness of a drug and its chemical compounds in connection with the genetical origin of the disease.
+Drug Discovery is the process of identifying new medical drugs through computation. In general, it consists of 3 phases: development, clinical and postlaunch (Wooler et al., 2017). This would require the creation of large data warehouses. This project manages a drug discovery company's collected data of clinical trials and allows a team of experts (including pharmacologists, chemists, data scientists...) to access a specialized part of it in order to relate biological and chemical entities with genetically based diseases. This can be especially useful to come up with inferential statistics around the effectiveness of a drug and its chemical compounds in connection with the genetical origin of the disease.
 
 ## Introduction
 
-**Drug Discovery** consists of target identification, assay development, high throughput screening of small molecule libraries for hit identification, lead discovery and optimization, preclinical development, investigational new drug (IND) filing, clinical trials, and filing for final FDA approval (Thomas et al., 2010 as cited in Sun et al., 2017).
-
-A **Database Management System** role is to handle the storage, retrieval and organization of data allowing interaction and manipulation of this data by end users. Companies involved in drug discovery have a huge amount of data to process in the drug design phase, therefore require a database management system that efficiently manage and store data- regarding drugs, diseases and records of clinical trials- for a long period of time safely.
-
 A **Genetic Disease** originates from a flaw in the original genetic information, and can be due to mutation of genes, gross chromosomal abnormalities or temporal/spatial patterns of expression among other cases. In this project, the main interest will be around a mutation caused diseases, where genetical data will be stored and studied by the users of the DBMS.
+
+**Drug Discovery** consists mainly of target identification, discovery and optimization, preclinical development, clinical trials, and request for FDA approval (Thomas et al., 2010 as cited in Sun et al., 2017). In order to create models that successfully predict the efficiency of a drug, a large amount of data has to be collected from **clinical trials**.
+
+A **Database Management System** role is to handle the storage, retrieval and organization of data allowing interaction and manipulation of this data by end users. Companies involved in drug discovery have a huge amount of data to process in the drug design phase, therefore require a database management system that efficiently manage and store data- regarding drugs, diseases and records- for a long period of time safely.
+
+Therefore, data about genes (names, location, variants along with their associated diseases) and drugs (names, chemical compositions, testing stages...) has to be collected from credible scientific sources and public databases (such as ebi's). The clinical trials are meant to test a drug on a volunteer with an identified disease in order to track the test results along with the variables that might diverge the test results and probably allows to conclude corelations such as age, sex, etc... In this project the records are generated associating diseases and drugs together from the sample data collected. **Note that no association nor test result is relevant in real life as it is the case for gene, variants, diseases, drugs and chemical data since it was randomly generated using** `random module` ** in python**.
+
+Priveleges in this project can be granted to several types of workers in this company in the following way:
+* _pharmacologists and chemists:_ would be GRANTED privileges on VIEW tables COMPOUND and DRUG to access and modify them
+* _Medical geneticists, physicians and biotechnologists:_ would be GRANTED privileges on VIEW tables GENE, DISEASE and VARIANT to access and modify them
+* _Process chemists, statisticians and data scientists:_ would be GRANTED privileges on VIEW tables COMPOUND, DRUG, GENE, DISEASE and VARIANT only to access them (no modification)
+* _Human Resources:_ would be GRANTED privileges on VIEW tables PATIENT and RECORDS to access and insert new data
 
 ## ER model
 
