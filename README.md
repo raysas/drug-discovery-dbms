@@ -6,9 +6,14 @@
 
 ## Abstract
 
-This is a compulsory project for DataBase Management Systems course, taken in Fall 2022. Submission consisted of a 65 pages long paper explaining the different design stages of the dbms and implemented using MySQL workbench, followed by a 10 min powerpoint presentation in class.
+This is a compulsory project for Database Management Systems course, taken in Fall 2022. Submission consisted of a 65 pages long paper explaining the different design stages of the dbms and implemented using MySQL workbench, followed by a 10 min powerpoint presentation in class.
 
-Drug Discovery is the process of identifying new medical drugs through computation. In general, it consists of 3 phases: development, clinical and postlaunch (Wooler et al., 2017). This would require the creation of large data warehouses. This project manages a drug discovery company's collected data of clinical trials and allows a team of experts (including pharmacologists, chemists, data scientists...) to access a specialized part of it in order to relate biological and chemical entities with genetically based diseases. This can be especially useful to come up with inferential statistics around the effectiveness of a drug and its chemical compounds in connection with the genetical origin of the disease.
+Drug Discovery is the process of identifying new medical drugs through computation. In general, it consists of 3 phases: development, clinical and postlaunch (Wooler et al., 2017). This would require the creation of large data warehouses. This project manages the collected data from clinical trials of a ***drug discovery company (drugopops)*** and allows a team of experts (including pharmacologists, chemists, data scientists...) identified as users with roles to access a specialized part of it in order to relate biological and chemical entities with genetically based diseases. This can be especially useful to come up with inferential statistics around the effectiveness of a drug and its chemical compounds in connection with the genetical origin of the disease.
+ The project was normalized up to the Boyce-Codd Normal Form and consisted of the following design phases:
+ * conceptual design (ER model)
+ * logical design (transformation to a relational model)
+ * physical model (implemeting this model using MySQL workbench)
+
 
 ## Introduction
 
@@ -19,15 +24,6 @@ A **Genetic Disease** originates from a flaw in the original genetic information
 A **Database Management System** role is to handle the storage, retrieval and organization of data allowing interaction and manipulation of this data by end users. Companies involved in drug discovery have a huge amount of data to process in the drug design phase, therefore require a database management system that efficiently manage and store data- regarding drugs, diseases and records- for a long period of time safely.
 
 Therefore, data about genes (names, location, variants along with their associated diseases) and drugs (names, chemical compositions, testing stages...) has to be collected from credible scientific sources and public databases (such as EBI's). The clinical trials are meant to test a drug on a volunteer with an identified disease in order to track the test results and the variables in each test in addition to the drug and disease such as age, sex, gene variant etc... In this project the records are associating diseases and drugs together from the sample data collected. **Note that no association nor test result is relevant in real life and people are fictional since data of records and patients was randomly generated using** `random module` **in python** (check [python scripts](./scripts/#python)).
-
-The project consisted of the following design phases:
- * conceptual design (ER model)
- * logical design (transformation to a relational model)
- * physical model (implemeting this model using MySQL workbench)
- 
-Furthermore, this database has been normalized up to the Boyce-Codd Normal Form.
-
-Users of this dbms (company's employees) have different specialities including pharmacologists, chemists, toxicologists, process chemists, geneticists, physicians, statisticians, data scientists, machine learning engineers, and human resources. Each user will be granted privileges based on the **role** he/she has.
 
 ## ER model
 
