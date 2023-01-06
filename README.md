@@ -17,7 +17,7 @@ Drug Discovery is the process of identifying new medical drugs through computati
 
 ## Introduction
 
-A **Genetic Disease** originates from a flaw in the original genetic information, and can be due to mutation of genes, gross chromosomal abnormalities or temporal/spatial patterns of expression among other cases. In this project, the main interest will be around a mutation caused diseases, where genetical data will be stored and studied by the users of the DBMS.
+A **Genetic Disease** originates from a flaw in the original genetic information, and can be due to mutation of genes, gross chromosomal abnormalities or temporal/spatial patterns of expression among other cases. In this project, the main interest will be around mutated genes (variants) that cause genetical diseases.
 
 **Drug Discovery** consists mainly of target identification, discovery and optimization, preclinical development, clinical trials, and request for FDA approval (Thomas et al., 2010 as cited in Sun et al., 2017). In order to create models that successfully predict the efficiency of a drug, a large amount of data has to be collected from **clinical trials**.
 
